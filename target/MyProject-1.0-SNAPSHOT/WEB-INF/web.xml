@@ -32,5 +32,13 @@
         <servlet-name>sessionMockController</servlet-name>
         <url-pattern>/sessionMock.do</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>cookieMockController</servlet-name>
+        <servlet-class>com.solomanin.controller.CookieMockController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>cookieMockController</servlet-name>
+        <url-pattern>/cookieMock.do</url-pattern>
+    </servlet-mapping>
 
 </web-app>
