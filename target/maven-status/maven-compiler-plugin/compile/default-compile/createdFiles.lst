@@ -1,0 +1,10 @@
+com\solomanin\dao\exception\DaoException.class
+com\solomanin\entity\MockEntityA.class
+com\solomanin\dao\exception\NoSuchEntityException.class
+com\solomanin\controller\MVCMockController.class
+com\solomanin\dao\exception\DaoSystemException.class
+com\solomanin\entity\MockEntityA$1.class
+com\solomanin\dao\impl\ProductDaoMock.class
+com\solomanin\dao\exception\DaoBussinessException.class
+com\solomanin\entity\MockEntityB.class
+com\solomanin\controller\MockController.class
