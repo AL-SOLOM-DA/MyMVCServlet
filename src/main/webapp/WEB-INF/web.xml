@@ -14,7 +14,9 @@
     <servlet-mapping>
         <servlet-name>productController</servlet-name>
         <url-pattern>/product.do</url-pattern>
-    </servlet-mapping><servlet>
+    </servlet-mapping>
+    <!--mock -->
+    <servlet>
         <servlet-name>mockController</servlet-name>
         <servlet-class>com.solomanin.controller.MVCMockController</servlet-class>
     </servlet>
@@ -22,6 +24,13 @@
         <servlet-name>mockController</servlet-name>
         <url-pattern>/mock.do</url-pattern>
     </servlet-mapping>
-    <!--mock -->
+    <servlet>
+        <servlet-name>sessionMockController</servlet-name>
+        <servlet-class>com.solomanin.controller.SessionMockController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>sessionMockController</servlet-name>
+        <url-pattern>/sessionMock.do</url-pattern>
+    </servlet-mapping>
 
 </web-app>
