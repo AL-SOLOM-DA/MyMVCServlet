@@ -17,7 +17,7 @@ public class MVCMockController extends HttpServlet {
         request.setAttribute("test", "request");
         request.getSession().setAttribute("test", "session");
         request.getServletContext().setAttribute("test", "servletContext");
-        request.getRequestDispatcher("mvcMockView.jp").forward(request,response);
+        request.getRequestDispatcher("mvcMockView.jsp").forward(request,response);
     }
 
 

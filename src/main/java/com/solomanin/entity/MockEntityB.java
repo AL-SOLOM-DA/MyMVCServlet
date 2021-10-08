@@ -5,6 +5,8 @@ public class MockEntityB {
     private int intValue0 = 0;
     private int intValue1 = 1;
 
+
+
     public String getStr() {
         return str;
     }

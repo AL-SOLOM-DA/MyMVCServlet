@@ -16,7 +16,7 @@
         <url-pattern>/product.do</url-pattern>
     </servlet-mapping><servlet>
         <servlet-name>mockController</servlet-name>
-        <servlet-class>com.solomanin.controller.MockController</servlet-class>
+        <servlet-class>com.solomanin.controller.MVCMockController</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>mockController</servlet-name>
