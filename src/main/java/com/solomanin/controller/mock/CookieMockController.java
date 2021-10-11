@@ -1,4 +1,4 @@
-package com.solomanin.controller;
+package com.solomanin.controller.mock;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.Cookie;
