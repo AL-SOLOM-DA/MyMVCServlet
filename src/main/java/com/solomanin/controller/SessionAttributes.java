@@ -1,7 +1,7 @@
 package com.solomanin.controller;
 
 public class SessionAttributes {
-    public static final String PRODUCKTS_IN_BUCKET = "productsInBucket";
+    public static final String PRODUCTS_IN_BUCKET = "productsInBucket";
 
     private SessionAttributes(){
 

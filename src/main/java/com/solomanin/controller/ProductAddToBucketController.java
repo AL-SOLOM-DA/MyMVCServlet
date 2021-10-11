@@ -15,13 +15,13 @@ import java.io.IOException;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-import static com.solomanin.controller.SessionAttributes.PRODUCKTS_IN_BUCKET;
+import static com.solomanin.controller.SessionAttributes.PRODUCTS_IN_BUCKET;
 import static java.util.Collections.singletonMap;
 import static java.util.Collections.unmodifiableMap;
 
 public class ProductAddToBucketController extends HttpServlet {
     public static final String PARAM_ID = "id";
-    public static final String PAGE_ERROR = "allProduct.jsp";
+    public static final String PAGE_ERROR = "productAll.do";
 
     private ProductDao productDao = new ProductDaoMock();
 
@@ -35,9 +35,9 @@ public class ProductAddToBucketController extends HttpServlet {
                 Product product = productDao.selectById(id);
 
                 HttpSession session = req.getSession(true);
-                Map<Product, Integer> oldBucket = (Map<Product, Integer>) session.getAttribute(PRODUCKTS_IN_BUCKET);
+                Map<Product, Integer> oldBucket = (Map<Product, Integer>) session.getAttribute(PRODUCTS_IN_BUCKET);
                 if(oldBucket == null){
-                    session.setAttribute(PRODUCKTS_IN_BUCKET, singletonMap(product, 1));
+                    session.setAttribute(PRODUCTS_IN_BUCKET, singletonMap(product, 1));
                 } else {
                     Map<Product, Integer> newBucket = new LinkedHashMap<>(oldBucket);
                     if(!newBucket.containsKey(product)){
@@ -45,13 +45,16 @@ public class ProductAddToBucketController extends HttpServlet {
                     } else {
                         newBucket.put(product, newBucket.get(product)+1);
                     }
-                    session.setAttribute(PRODUCKTS_IN_BUCKET, unmodifiableMap(newBucket));
+                    session.setAttribute(PRODUCTS_IN_BUCKET, unmodifiableMap(newBucket));
                 }
                 String newLocation = "product.do?id="+id;
                 resp.sendRedirect(newLocation);
+                return;
             } catch (NoSuchEntityException | DaoSystemException | NumberFormatException e) {
                 /*NOP*/
             }
+
         }
+        resp.sendRedirect(PAGE_ERROR);
     }
 }

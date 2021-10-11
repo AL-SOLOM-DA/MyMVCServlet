@@ -15,6 +15,22 @@
         <servlet-name>productController</servlet-name>
         <url-pattern>/product.do</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>productAllDo</servlet-name>
+        <servlet-class>com.solomanin.controller.ProductAllController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>productAllDo</servlet-name>
+        <url-pattern>/productAll.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>productAdd</servlet-name>
+        <servlet-class>com.solomanin.controller.ProductAddToBucketController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>productAdd</servlet-name>
+        <url-pattern>/productAddToBucket.do</url-pattern>
+    </servlet-mapping>
     <!--mock -->
     <servlet>
         <servlet-name>mockController</servlet-name>
@@ -40,14 +56,7 @@
         <servlet-name>cookieMockController</servlet-name>
         <url-pattern>/cookieMock.do</url-pattern>
     </servlet-mapping>
-    <servlet>
-        <servlet-name>productAllDo</servlet-name>
-        <servlet-class>com.solomanin.controller.ProductAllController</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>productAllDo</servlet-name>
-        <url-pattern>/productAll.do</url-pattern>
-    </servlet-mapping>
+    
 
     <session-config>
         <session-timeout>240</session-timeout>
