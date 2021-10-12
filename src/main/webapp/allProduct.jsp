@@ -14,8 +14,8 @@
     <p>ALL PRODUCT PAGE</p>
 
     <ul>
-        <li><a href="product.do?id=1">Paper</a></li>
-        <li><a href="product.do?id=2">Bread</a></li>
+        <li><a href="product.do?id=1">Bread</a></li>
+        <li><a href="product.do?id=2">Paper</a></li>
         <li><a href="product.do?id=3">Sugar</a></li>
     </ul>
 </body>
